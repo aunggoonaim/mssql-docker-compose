@@ -10,4 +10,4 @@ services:
       - SA_PASSWORD=A!MDevel0p#
       - MSSQL_PID=Developer
     volumes:
-      - ./mssqldata:/var/opt/mssql
+      - mssqldata:/var/opt/mssql
