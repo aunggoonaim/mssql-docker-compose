@@ -1,7 +1,7 @@
 version: "3.1"
 
 services:
-  sql-server:
+  mssqlserver:
     image: mcr.microsoft.com/mssql/server:2019-latest
     ports:
       - 1433:1433
@@ -9,5 +9,7 @@ services:
       - ACCEPT_EULA=Y
       - SA_PASSWORD=A!MDevel0p#
       - MSSQL_PID=Developer
-    volumes:
-      - mssqldata:/var/opt/mssql
+    # volumes:
+    #   - ./mssqldata:/var/opt/mssql/data
+    #   - ./log:/var/opt/mssql/log
+    #   - ./secrets:/var/opt/mssql/secrets

@@ -9,4 +9,10 @@
 
 ## COPY BACKUP
 
-`docker cp C:/AIM/Database/SMARTPM_QAS_080422_0025.bak eb2:/var/opt/mssql`
+`docker cp C:/AIM/Database/SMARTPM_QAS_080422_0025.bak 760:/var/opt/mssql/data`
+
+`docker exec -it 760 rm /var/opt/mssql/data/SMARTPM_QAS_080422_0025.bak`
+
+## BACK UP
+
+`BACKUP DATABASE [SMARTPM] TO DISK = N'/var/opt/mssql/data/SMARTPM_QAS_080422_0025.bak' WITH FORMAT, INIT, COMPRESSION,STATS = 10`
